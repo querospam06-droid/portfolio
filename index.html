@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Nome Sobrenome — projetos, habilidades e contato." />
+  <title>Portfolio gFalasco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir para o início"><img class="brand-mark brand-logo" src="logo-f-icon.png" alt="" /><span>gFalasco</span></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#sobre" aria-current="page">Sobre</a><a class="nav-project-button" href="projetos.html">Projetos</a><a href="contato.html">Contato</a>
+    </nav>
+    <a class="top-contact" href="contato.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="banner-slot" aria-label="Banner Falaço">
+    <img class="personal-banner" src="banner.png" alt="Banner Falaço com fundo geométrico roxo e cinza" />
+  </div>
+  <main>
+    <section class="spotlight-section section-wrap" aria-label="Apresentação em destaque">
+      <div class="spotlight-illustration reveal">
+        <!-- Coloque sua ilustração em outputs/ilustracao.jpg e atualize o src abaixo. -->
+        <img class="portrait-photo" src="ilustracao.jpg" alt="Gabriel Falasco Pagano em sua formatura" onerror="this.hidden=true; this.nextElementSibling.hidden=false" />
+        <div class="illustration-placeholder" hidden>Adicione sua ilustração<br><small>salve a imagem como ilustracao.jpg</small></div>
+        <span class="illustration-corner corner-top-left"></span><span class="illustration-corner corner-top-right"></span><span class="illustration-corner corner-bottom-left"></span><span class="illustration-corner corner-bottom-right"></span>
+      </div>
+      <div class="spotlight-copy reveal">
+        <p class="section-kicker">Gabriel Falasco Pagano</p>
+        <h2>Sobre <span class="gradient-purple">mim</span></h2>
+        <p>Meu nome é Gabriel Falasco Pagano, tenho 15 anos e atualmente curso o ensino médio integrado ao técnico em Multimídia no Senac. Gosto muito de jogos, tecnologia e música.</p>
+      </div>
+    </section>
+    <section class="spotlight-section spotlight-reverse section-wrap" aria-label="Mais sobre meu trabalho">
+      <div class="spotlight-copy reveal">
+        <p class="section-kicker">Além da escola</p>
+        <h2><span class="gradient-text">Certificações</span></h2>
+        <p>Além de cursar o técnico em Multimídia, tenho dois certificados em linguagens de marcação: um em HTML5 e outro em CSS3. Também tenho um certificado de programação em JavaScript.</p>
+      </div>
+      <div class="spotlight-illustration certifications-illustration reveal">
+        <!-- Imagem de certificações -->
+        <img class="certifications-photo" src="certificacoes.png" alt="Logos de HTML5, CSS3 e JavaScript" onerror="this.hidden=true; this.nextElementSibling.hidden=false" />
+        <div class="illustration-placeholder" hidden>Adicione a imagem de certificações<br><small>salve a imagem como certificacoes.png</small></div>
+        <span class="illustration-corner corner-top-left"></span><span class="illustration-corner corner-top-right"></span><span class="illustration-corner corner-bottom-left"></span><span class="illustration-corner corner-bottom-right"></span>
+      </div>
+    </section>
+    <section class="spotlight-section section-wrap" aria-label="Criatividade e soluções">
+      <div class="spotlight-illustration reveal">
+        <!-- Coloque uma terceira imagem em outputs/ilustracao-3.jpg. -->
+        <img class="story-photo" src="como-comecou.webp" alt="Ilustração colorida de uma pessoa flutuando em um céu estrelado" onerror="this.hidden=true; this.nextElementSibling.hidden=false" />
+        <div class="illustration-placeholder" hidden>Adicione sua imagem<br><small>salve a imagem como como-comecou.webp</small></div>
+        <span class="illustration-corner corner-top-left"></span><span class="illustration-corner corner-top-right"></span><span class="illustration-corner corner-bottom-left"></span><span class="illustration-corner corner-bottom-right"></span>
+      </div>
+      <div class="spotlight-copy reveal">
+        <p class="section-kicker">Início</p>
+        <h2>Como <span class="gradient-text">começou</span></h2>
+        <p>Sempre gostei de criar usando tecnologia. Desde cedo, procuro expressar o que sinto em cada projeto, transformando referências e coisas de que já gosto em novas criações.</p>
+      </div>
+    </section>
+    <div class="projects-jump-wrap reveal"><a class="projects-jump-button" href="projetos.html">Projetos</a></div>
+
+
+    <section class="about-section section-wrap" id="sobre"><div class="about-decoration" aria-hidden="true">✳</div><div class="about-content"><p class="section-kicker">UM POUCO SOBRE MIM</p><h2><span class="gradient-text">Por que web design?</span></h2><p>Escolhi o web design porque é uma área que está sempre se renovando e crescendo. Muitos interesses começam com uma pergunta: “como?” ou “por quê?”. Como já contei, sempre gostei de criar, mas nunca tive muita habilidade com trabalhos manuais. No web design, encontrei uma forma de expressar quem sou sem me preocupar se algo ficou torto ou se precisaria refazer à mão.</p></div></section>
+
+    <section class="contact-section" id="contato"><div class="contact-inner"><p class="section-kicker">Tudo começa com uma ideia</p><h2>Do <span class="text-red">Caos</span> a<br><span class="gradient-text">Criação</span></h2><p>Da ideia ao visual, explorando diferentes formas de comunicar ideias e emoções</p><a class="contact-button" href="contato.html">Entre em contato <span>↗</span></a><div class="social-links"><a href="https://www.instagram.com/falasc0?srtk=MXExcmhkbDVzaGE5Nw%3D%3D&amp;utm_source=qr" target="_blank" rel="noreferrer">Instagram ↗</a></div></div></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#inicio"><img class="brand-mark brand-logo" src="logo-f-icon.png" alt="" /><span>gFalasco</span></a><span>Feito com intenção e café. © <span id="year"></span></span><a href="#inicio">Voltar ao topo ↑</a></footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

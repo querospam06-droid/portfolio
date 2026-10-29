@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projetos de gFalasco — uma seleção de trabalhos e ideias." />
+  <title>Projetos — Portfolio gFalasco</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar" id="top">
+    <a class="brand" href="index.html" aria-label="Voltar ao início"><img class="brand-mark brand-logo" src="logo-f-icon.png" alt="" /><span>gFalasco</span></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">Início</a><a class="nav-project-button" href="projetos.html" aria-current="page">Projetos</a><a href="contato.html">Contato</a>
+    </nav>
+    <a class="top-contact" href="contato.html">Vamos conversar <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <main>    <section class="projects-section section-wrap" id="projetos">
+      <div class="section-heading"><div><h2>Meus projetos</h2></div></div>
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card" data-category="web" data-search="produto baw criação novo produto chaveiro baw clothing">
+          <button class="project-visual visual-baw" type="button" aria-expanded="false" aria-controls="detalhe-baw" aria-label="Expandir projeto Produto Baw"><img class="project-photo" src="produto-baw.png" alt="Arte do produto Baw Wacky Dayz" /><span class="visual-label">CRIAÇÃO DE PRODUTO</span></button>
+          <div class="project-details" id="detalhe-baw" hidden><p>Desenvolvimento de um conceito de produto exclusivo para a Baw Clothing, explorando formato, identidade visual e apresentação de uma peça colecionável alinhada ao universo da marca.</p></div>
+          <div class="project-info"><div><h3>Produto Baw</h3><p>A criação de um novo produto</p></div></div><div class="tags"><span>Web design</span><span>Direção de arte</span></div>
+        </article>
+        <article class="project-card" data-category="web" data-search="spotify redesign aplicativo streaming ux ui">
+          <button class="project-visual visual-spotify" type="button" aria-expanded="false" aria-controls="detalhe-spotify" aria-label="Expandir projeto Redesign Spotify"><img class="project-photo" src="redesign-spotify.png" alt="Redesign do Spotify com ondas verdes e notas musicais" /><span class="visual-label">EXPERIÊNCIA DE STREAMING</span></button>
+          <div class="project-details" id="detalhe-spotify" hidden><p>Uma exploração visual de uma nova experiência para o Spotify, repensando a forma de apresentar música e conteúdo por meio de cores, elementos gráficos e uma interface mais expressiva.</p></div>
+          <div class="project-info"><div><h3>Redesign Spotify</h3><p>Uma nova forma de ver</p></div></div><div class="tags"><span>Redesign</span><span>UX/UI</span></div>
+        </article>
+        <article class="project-card" data-category="branding" data-search="made for expression moda roupas expressão identidade visual">
+          <button class="project-visual visual-expression" type="button" aria-expanded="false" aria-controls="detalhe-expression" aria-label="Expandir projeto Made For Expression"><img class="project-photo" src="made-for-expression.png" alt="Logo Made For Expression em letras magenta dentro de um oval" /></button>
+          <div class="project-details" id="detalhe-expression" hidden><p>Uma identidade de moda criada para transformar roupas em uma forma de expressão pessoal, com uma linguagem visual marcante e foco na individualidade.</p></div>
+          <div class="project-info"><div><h3>Made For Expression</h3><p>Uma forma de se expressar pelo que veste</p></div></div><div class="tags"><span>Branding</span><span>Identidade visual</span></div>
+        </article>
+        <article class="project-card" data-category="web" data-search="linha viva e-commerce loja online web design moda sustentável">
+          <button class="project-visual visual-linha" type="button" aria-expanded="false" aria-controls="detalhe-linha" aria-label="Expandir projeto Linha Viva"><img class="project-photo linha-viva-photo" src="linha-viva.webp" alt="Imagem abstrata em tons de azul e lilás" /></button>
+          <div class="project-details" id="detalhe-linha" hidden><p>Conceito de loja digital voltado a escolhas duradouras, com uma direção visual que combina formas orgânicas e tons suaves para comunicar consumo consciente.</p></div>
+          <div class="project-info"><div><h3>Linha Viva</h3><p>Uma loja digital para escolhas que duram mais.</p></div></div><div class="tags"><span>E-commerce</span><span>UX/UI</span></div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Nenhum projeto encontrado. Tente outra busca.</p>
+    </section>  </main>
+  <footer class="footer"><a class="brand" href="index.html"><img class="brand-mark brand-logo" src="logo-f-icon.png" alt="" /><span>gFalasco</span></a><span>Feito com intenção e café. © <span id="year"></span></span><a href="#top">Voltar ao topo ↑</a></footer>
+</body>
+</html>
+
+
+
+
+
+
+
+

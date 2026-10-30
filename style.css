@@ -131,3 +131,7 @@
 .project-details p{margin:0;color:#626a73;font-size:12px;line-height:1.75}
 @keyframes details-in{from{opacity:0;transform:translateY(-9px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:700px){.project-card.is-expanded .project-visual{height: min(82vw,390px)}}
+
+
+/* TEMPORARIO: deixa as secoes visiveis durante a importacao no Figma. Remover depois. */
+.reveal,.reveal.is-visible{opacity:1!important;transform:none!important;transition:none!important}

@@ -76,7 +76,7 @@
 /* Centraliza a ilustração de “Como começou” dentro do quadro. */
 .spotlight-illustration:has(.story-photo){display:flex;align-items:center;justify-content:center}
 .spotlight-illustration .story-photo{width:auto;height:100%;max-width:100%;max-height:100%;margin:auto;object-fit:contain!important;object-position:center center;background:transparent}
-.linha-viva-photo{object-fit:cover;background:#f7f7fa}
+.linha-viva-photo{object-fit:contain;background:#f0f1f1;padding:10px;filter:drop-shadow(0 5px 9px rgba(32,33,36,.18))}
 .gradient-purple{background:linear-gradient(100deg,#a855f7 0%,#7e22ce 55%,#6b21a8 100%);background-clip:text;-webkit-background-clip:text;color:transparent}
 /* Igualar a sombra da ilustração de “Como começou” à imagem de certificações. */
 .spotlight-illustration:has(.story-photo){margin-block:24px;border:1px solid #e5eaf2;box-shadow:0 18px 38px rgba(32,45,67,.2),0 6px 14px rgba(32,45,67,.1)}
@@ -119,6 +119,19 @@
 @media(max-width:700px){.contact-view .topbar-end-space{display:none}}
 @media(min-width:701px){.main-nav{background:rgba(239,245,255,.78)}}
 @media(min-width:701px){.topbar{position:relative}.topbar .main-nav{position:absolute;left:50%;transform:translateX(-50%)}}
+/* Navegação Liquid Glass: vidro fosco, reflexo interno e destaque sutil no hover/estado ativo. */
+@media(min-width:701px){
+  .main-nav{isolation:isolate;overflow:hidden;border-color:rgba(255,255,255,.92);background:linear-gradient(145deg,rgba(255,255,255,.76),rgba(226,238,255,.56) 55%,rgba(255,255,255,.68));box-shadow:0 8px 24px rgba(42,62,94,.10),inset 0 1px 0 rgba(255,255,255,.98),inset 0 -1px 0 rgba(167,192,230,.16);backdrop-filter:blur(22px) saturate(1.65);-webkit-backdrop-filter:blur(22px) saturate(1.65)}
+  .main-nav a,.main-nav .nav-project-button{z-index:0;overflow:hidden;border-color:rgba(255,255,255,.36);background:linear-gradient(145deg,rgba(255,255,255,.68),rgba(225,237,255,.5));box-shadow:inset 0 1px 0 rgba(255,255,255,.88),0 2px 5px rgba(66,91,130,.04);transition:transform .24s ease,background .24s ease,border-color .24s ease,box-shadow .24s ease}
+  .main-nav a:hover,.main-nav .nav-project-button:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.88);background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(208,228,255,.76));box-shadow:inset 0 1px 0 #fff,0 5px 12px rgba(64,97,150,.12)}
+  .main-nav a[aria-current="page"]{border-color:rgba(255,255,255,.96);background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(206,226,255,.86));box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(108,153,220,.16),0 3px 9px rgba(64,97,150,.12)}
+}
+@media(max-width:700px){
+  .main-nav a,.main-nav .nav-project-button{border-color:rgba(255,255,255,.94);background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(228,238,255,.74));box-shadow:inset 0 1px 0 #fff,0 3px 10px rgba(55,77,112,.08);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);transition:background .22s ease,border-color .22s ease,box-shadow .22s ease}
+  .main-nav a:hover,.main-nav .nav-project-button:hover{background:linear-gradient(145deg,#fff,rgba(215,231,255,.88));border-color:rgba(255,255,255,.98);box-shadow:inset 0 1px 0 #fff,0 5px 13px rgba(55,77,112,.12)}
+  .main-nav a[aria-current="page"]{background:linear-gradient(145deg,#fff,rgba(210,229,255,.94));border-color:rgba(255,255,255,.98);box-shadow:inset 0 1px 0 #fff,0 4px 11px rgba(55,77,112,.11)}
+}
+@media(prefers-reduced-motion:reduce){.main-nav a,.main-nav .nav-project-button{transition:none}.main-nav a:hover,.main-nav .nav-project-button:hover{transform:none}}
 /* Cartões de projetos expansíveis: imagem maior e descrição logo abaixo. */
 .project-visual{width:100%;padding:0;border:0;color:inherit;text-align:left;cursor:pointer;font:inherit;height:270px;transition:height .72s cubic-bezier(.22,1,.36,1),transform .45s ease,box-shadow .55s ease}
 .project-visual:focus-visible{outline:3px solid rgba(66,133,244,.6);outline-offset:3px}
@@ -132,6 +145,3 @@
 @keyframes details-in{from{opacity:0;transform:translateY(-9px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:700px){.project-card.is-expanded .project-visual{height: min(82vw,390px)}}
 
-
-/* TEMPORARIO: deixa as secoes visiveis durante a importacao no Figma. Remover depois. */
-.reveal,.reveal.is-visible{opacity:1!important;transform:none!important;transition:none!important}

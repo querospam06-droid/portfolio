@@ -15,15 +15,8 @@ nav.querySelectorAll('a').forEach((link) => {
   });
 });
 
-// Revela os blocos ao entrarem na área de leitura e esconde ao saírem dela.
-const revealItems = [...document.querySelectorAll('.reveal')];
-window.addEventListener('scroll', () => {
-  revealItems.forEach((item) => {
-    const bounds = item.getBoundingClientRect();
-    const inReadingArea = bounds.top < window.innerHeight * 0.82 && bounds.bottom > window.innerHeight * 0.18;
-    item.classList.toggle('is-visible', inReadingArea);
-  });
-}, { passive: true });
+// Temporariamente, mantenha todos os blocos visíveis para facilitar a importação no Figma.
+document.querySelectorAll('.reveal').forEach((item) => item.classList.add('is-visible'));
 
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();

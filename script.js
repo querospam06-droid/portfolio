@@ -53,33 +53,11 @@ document.querySelectorAll('.project-visual[aria-controls]').forEach((visual) => 
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
   const status = document.querySelector('#contact-form-status');
-  contactForm.addEventListener('submit', async (event) => {
+  contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const submitButton = contactForm.querySelector('[type="submit"]');
-    submitButton.disabled = true;
-    status.textContent = 'Enviando sua mensagem…';
+    status.textContent = 'O envio de mensagens está temporariamente desativado.';
     status.style.color = '#70757a';
-    const fields = Object.fromEntries(new FormData(contactForm).entries());
-
-    try {
-      const response = await fetch('https://formsubmit.co/ajax/gabriel.fpagano@gmail.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(fields)
-      });
-      const result = await response.json();
-      if (!response.ok || (result.success !== true && result.success !== 'true')) {
-        throw new Error('Não foi possível confirmar o envio.');
-      }
-      status.textContent = 'Mensagem enviada! Obrigado por entrar em contato.';
-      status.style.color = '#39845a';
-      contactForm.reset();
-    } catch (error) {
-      status.textContent = 'Não foi possível enviar. Confira se o site está publicado e se o e-mail já foi confirmado no FormSubmit.';
-      status.style.color = '#b54747';
-    } finally {
-      submitButton.disabled = false;
-    }
   });
 }
+
 
